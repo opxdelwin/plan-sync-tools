@@ -5,7 +5,7 @@
 ## Operation Flow
  - generate `.xlsx` file for each section (using WPS Office -> Split Workbook)
  - convert each `.xlsx` file to `.csv` (using `[xlsx_to_csv.py]`)
- - generate required JSON from the script (using `[json_gen.py]`).
+ - generate required JSON from the script (using `[json_generator.py]`).
 
 ## NOTE
  - required folders are created automatically

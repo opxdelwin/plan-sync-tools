@@ -73,7 +73,7 @@ Required scripts are written in python, and data are stored in CSV format.
 <details>
  <summary>3. Converting `.xlsx` to `.csv` files</summary>
 
- - `` python script can be run to convert all files in `/xls/` directory to `csv` format.
+ - `xlsx_to_csv.py` python script can be run to convert all files in `/xls/` directory to `csv` format.
  - New csv files are saved to `/csv/` directory, as required by next script.
 
  - Note how
@@ -92,7 +92,7 @@ Required scripts are written in python, and data are stored in CSV format.
 <details>
  <summary>4. Generating JSON files</summary>
 
-- Open `` python script
+- Open `json_generator.py` python script
 - Modify `academic_year` and `sem` variables to reflect the schedule we're woring on, (here `2023-2024` and `SEM3` respectievely)
 - Run the script.
 - All JSON files would be generated at `output/$academic_year/$semester/`

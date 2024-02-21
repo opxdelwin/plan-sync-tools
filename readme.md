@@ -42,6 +42,8 @@ Required scripts are written in python, and data are stored in CSV format.
 - Note how headers were changed from (as they're required by code)
    - `Day` --> `day`
    - `Section` --> `section`
+
+- Alternatively, `data\sem3-sample-modified.csv` can be used.
  
 </details>
 

@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "section": "a25",
+        "type": "norm-class",
+        "revision": "Revision 1.03",
+        "effective-date": "Jan 15, 2024 (Satrudays' valid till Mar 23)",
+        "contributor": "PlanSync Admin(N) :)",
+        "isTimetableUpdating": false,
+        "room": {
+            "monday": "CLA19",
+            "tuesday": "CLA1",
+            "wednesday": "CLA5",
+            "thursday": "C-14",
+            "friday": "C-13",
+            "saturday": "CLA5"
+        }
+    },
+    "data": {
+        "monday": {
+            "10:00 - 11:00": "Electives",
+            "11:20 - 13:20": "Comm. Lab",
+            "12:20 - 13:20": "***",
+            "15:00 - 16:00": "Chem",
+            "16:00 - 17:00": "T & NM.",
+            "17:00 - 18:00": "YHC"
+        },
+        "tuesday": {
+            "12:00 - 14:00": "Workshop Practice",
+            "15:00 - 16:00": "Eng",
+            "16:00 - 17:00": "Chem",
+            "17:00 - 18:00": "T&NM."
+        },
+        "wednesday": {
+            "10:00 - 11:00": "Electives",
+            "11:20 - 12:20": "B.Etc",
+            "12:20 - 13:20": "T & NM.",
+            "13:20 - 14:20": "***",
+            "15:00 - 16:00": "BEE",
+            "16:00 - 17:00": "Eng"
+        },
+        "thursday": {
+            "12:00 - 14:00": "Engg. Lab",
+            "15:00 - 16:00": "B.Etc",
+            "16:00 - 17:00": "BEE",
+            "17:00 - 18:00": "***"
+        },
+        "friday": {
+            "06:30 - 07:30": "YHC(P)",
+            "10:00 - 11:00": "Electives",
+            "12:00 - 14:00": "Chem. Lab",
+            "14:00 - 14:20": "***",
+            "15:00 - 16:00": "Chem",
+            "16:00 - 17:00": "T & NM.",
+            "17:00 - 18:00": "***"
+        },
+        "saturday": {
+            "10:00 - 11:00": "Electives",
+            "11:20 - 12:20": "B.Etc",
+            "12:20 - 13:20": "T & NM.",
+            "13:20 - 14:20": "***",
+            "15:00 - 16:00": "BEE",
+            "16:00 - 17:00": "Eng"
+        }
+    }
+}

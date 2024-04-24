@@ -1,0 +1,68 @@
+{
+    "meta": {
+        "section": "b27",
+        "type": "norm-class",
+        "revision": "Revision 1.03",
+        "effective-date": "Jan 15, 2024 (Satrudays' valid till Mar 23)",
+        "contributor": "PlanSync Admin :)",
+        "isTimetableUpdating": false,
+        "room": {
+            "monday": 403,
+            "tuesday": 504,
+            "wednesday": 305,
+            "thursday": 406,
+            "friday": 502,
+            "saturday": 305
+        }
+    },
+    "data": {
+        "monday": {
+            "10:00 - 11:00": "Electives",
+            "11:00 - 11:20": "***",
+            "11:20 - 12:20": "Physics",
+            "12:20 - 13:20": "T & NM.",
+            "13:20 - 15:00": "***",
+            "15:00 - 18:00": "PL(T) & Programming Lab"
+        },
+        "tuesday": {
+            "10:00 - 11:00": "Electives",
+            "11:00 - 11:20": "***",
+            "11:20 - 12:20": "EVS",
+            "12:20 - 15:00": "***",
+            "15:00 - 16:00": "T & NM.",
+            "16:00 - 17:00": "Physics"
+        },
+        "wednesday": {
+            "10:00 - 11:00": "Electives",
+            "11:200 - 12:00": "***",
+            "12:00 - 14:00": "Physics Lab",
+            "14:00 - 15:00": "***",
+            "15:00 - 16:00": "Sc LS.",
+            "16:00 - 17:00": "T & NM."
+        },
+        "thursday": {
+            "10:00 - 11:00": "Electives",
+            "11:00 - 11:20": "***",
+            "11:20 - 12:20": "EVS",
+            "12:20 - 13:20": "Physics",
+            "13:20 - 15:00": "***",
+            "15:00 - 18:00": "PL(T) & Programming Lab"
+        },
+        "friday": {
+            "10:00 - 11:00": "Electives",
+            "11:00 - 12:00": "***",
+            "12:00 - 14:00": "ED & Graphics",
+            "14:00 - 15:00": "***",
+            "15:00 - 16:00": "Sc LS.",
+            "16:00 - 17:00": "T & NM."
+        },
+        "saturday": {
+            "10:00 - 11:00": "Electives",
+            "11:200 - 12:00": "***",
+            "12:00 - 14:00": "Physics Lab",
+            "14:00 - 15:00": "***",
+            "15:00 - 16:00": "Sc LS.",
+            "16:00 - 17:00": "T & NM."
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "meta": {
+        "section": "a15",
+        "type": "norm-class",
+        "revision": "Revision 1.03",
+        "effective-date": "Jan 15, 2024 (Satrudays' valid till Mar 23)",
+        "contributor": "PlanSync Admin :)",
+        "isTimetableUpdating": false,
+        "room": {
+            "monday": "C-13",
+            "tuesday": "CL16",
+            "wednesday": "C-14",
+            "thursday": "C-14",
+            "friday": "C-12",
+            "saturday": "C-14"
+        }
+    },
+    "data": {
+        "monday": {
+            "08:00 - 09:00": "Electives",
+            "09:00 - 09:20": "***",
+            "09:20 - 11:20": "Comm. Lab",
+            "11:20 - 12:20": "Chem",
+            "12:20 - 13:20": "B. Etc",
+            "13:20 - 14:20": "T & NM."
+        },
+        "tuesday": {
+            "07:30 - 08:30": "YHC (P)",
+            "08:30 - 10:00": "***",
+            "10:00 - 12:00": "Chem. Lab",
+            "12:00 - 12:20": "***",
+            "12:20 - 13:20": "T & NM",
+            "13:20 - 14:20": "Chem"
+        },
+        "wednesday": {
+            "08:00 - 09:00": "Electives",
+            "09:00 - 10:00": "***",
+            "10:00 - 12:00": "Engg. Lab",
+            "12:00 - 12:20": "***",
+            "12:20 - 13:20": "T & NM.",
+            "13:20 - 14:20": "English"
+        },
+        "thursday": {
+            "08:20 - 09:20": "YHC",
+            "09:20 - 10:20": "Chem",
+            "10:20 - 11:20": "T & NM.",
+            "11:20 - 12:20": "B. Etc",
+            "12:20 - 13:20": "BEE",
+            "13:20 - 14:20": "English"
+        },
+        "friday": {
+            "08:00 - 09:00": "Electives",
+            "09:00 - 10:00": "***",
+            "10:00 - 12:00": "Workshop Practice",
+            "12:00 - 12:20": "***",
+            "12:20 - 13:20": "BEE"
+        },
+        "saturday": {
+            "08:00 - 09:00": "Electives",
+            "09:00 - 10:00": "***",
+            "10:00 - 12:00": "Engg. Lab",
+            "12:00 - 12:20": "***",
+            "12:20 - 13:20": "T & NM.",
+            "13:20 - 14:20": "English"
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "meta": {
+        "section": "b2",
+        "type": "norm-class",
+        "revision": "Revision 1.03",
+        "effective-date": "Jan 15, 2024 (Satrudays' valid till Mar 23)",
+        "contributor": "PlanSync Admin :)",
+        "isTimetableUpdating": false,
+        "room": {
+            "monday": 202,
+            "tuesday": 402,
+            "wednesday": 303,
+            "thursday": 202,
+            "friday": 402,
+            "saturday": 303
+        }
+    },
+    "data": {
+        "monday": {
+            "08:00 - 11:00": "PL(T) & Programming Lab.",
+            "11:00 - 12:00": "***",
+            "12:00 - 13:00": "Physics",
+            "13:00 - 13:20": "***",
+            "13:20 - 14:20": "Electives"
+        },
+        "tuesday": {
+            "08:00 - 10:00": "Physics Lab",
+            "10:00 - 10:20": "***",
+            "10:20 - 11:20": "EVS",
+            "11:20 - 12:20": "T &  NM.",
+            "12:20 - 13:20": "***",
+            "13:20 - 14:20": "Electives"
+        },
+        "wednesday": {
+            "08:00 - 09:00": "T & NM.",
+            "09:00 - 10:00": "T & NM.",
+            "10:00 - 11:00": "EVS",
+            "11:00 - 12:00": "Sc. LS",
+            "12:00 - 13:00": "Physics",
+            "13:00 - 13:20": "***",
+            "13:20 - 14:20": "Electives"
+        },
+        "thursday": {
+            "08:00 - 11:00": "PL(T) & Programming Lab.",
+            "11:00 - 12:00": "***",
+            "12:00 - 13:00": "Physics",
+            "13:00 - 13:20": "***",
+            "13:20 - 14:20": "Electives"
+        },
+        "friday": {
+            "08:00 - 10:00": "ED & Graphics",
+            "10:00 - 11:00": "***",
+            "11:00 - 12:00": "Sc. LS",
+            "12:10 - 13:00": "T &  NM.",
+            "13:00 - 13:20": "***",
+            "13:20 - 14:20": "Electives"
+        },
+        "saturday": {
+            "08:00 - 09:00": "T & NM.",
+            "09:00 - 10:00": "T & NM.",
+            "10:00 - 11:00": "EVS",
+            "11:00 - 12:00": "Sc. LS",
+            "12:00 - 13:00": "Physics",
+            "13:00 - 13:20": "***",
+            "13:20 - 14:20": "Electives"
+        }
+    }
+}

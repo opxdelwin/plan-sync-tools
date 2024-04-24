@@ -1,0 +1,62 @@
+{
+    "meta": {
+        "section": "a1",
+        "type": "norm-class",
+        "revision": "Revision 1.03",
+        "effective-date": "Jan 15, 2024 (Satrudays' valid till Mar 23)",
+        "contributor": "PlanSync Admin(N) :)",
+        "isTimetableUpdating": false,
+        "room": {
+            "monday": 102,
+            "tuesday": 104,
+            "wednesday": 103,
+            "thursday": 103,
+            "friday": 103,
+            "saturday": 103
+        }
+    },
+    "data": {
+        "monday": {
+            "08:00 - 10:00": "Engg. Lab.",
+            "10:00 - 11:00": "***",
+            "11:00 - 12:00": "T & NM.",
+            "12:00 - 13:00": "English",
+            "13:20 - 14:20": "Electives"
+        },
+        "tuesday": {
+            "08:00 - 10:00": "Workshop practice",
+            "10:00 - 11:00": "***",
+            "11:00 - 12:00": "Chem",
+            "12:00 - 13:00": "T & NM.",
+            "13:00 - 14:00": "E. Mech."
+        },
+        "wednesday": {
+            "06:30 - 07:30": "YHC(P)",
+            "09:00 - 10:00": "English",
+            "10:00 - 11:00": "Chem",
+            "11:00 - 12:00": "B.Etc.",
+            "12:00 - 13:00": "T & NM."
+        },
+        "thursday": {
+            "08:00 - 09:00": "T & NM.",
+            "09:00 - 10:00": "Chem",
+            "10:00 - 11:00": "E. Mech.",
+            "11:00 - 12:00": "YHC",
+            "11:00 - 13:00": "Comm. Lab"
+        },
+        "friday": {
+            "08:20 - 09:20": "B.Etc.",
+            "09:00 - 10:00": "***",
+            "10:00 - 12:00": "Chem. Lab",
+            "12:00 - 13:00": "***",
+            "13:20 - 14:20": "Electives"
+        },
+        "saturday": {
+            "06:30 - 07:30": "YHC(P)",
+            "09:00 - 10:00": "English",
+            "10:00 - 11:00": "Chem",
+            "11:00 - 12:00": "B.Etc.",
+            "12:00 - 13:00": "T & NM."
+        }
+    }
+}

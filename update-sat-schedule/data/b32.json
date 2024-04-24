@@ -1,0 +1,60 @@
+{
+    "meta": {
+        "section": "b32",
+        "type": "norm-class",
+        "revision": "Revision 1.03",
+        "effective-date": "Jan 15, 2024 (Satrudays' valid till Mar 23)",
+        "contributor": "PlanSync Admin :)",
+        "isTimetableUpdating": false,
+        "room": {
+            "monday": 406,
+            "tuesday": 506,
+            "wednesday": 504,
+            "thursday": 505,
+            "friday": 505,
+            "saturday": 504
+        }
+    },
+    "data": {
+        "monday": {
+            "11:20 - 12:20": "T & NM.",
+            "12:20 - 15:00": "***",
+            "15:00 - 18:00": "PL(T) & Programming Lab"
+        },
+        "tuesday": {
+            "10:00 - 11:00": "Electives",
+            "11:00 - 11:20": "***",
+            "11:20 - 12:20": "Physics",
+            "12:20 - 15:00": "***",
+            "15:00 - 16:00": "EVS",
+            "16:00 - 17:00": "T & NM."
+        },
+        "wednesday": {
+            "11:20 - 12:20": "Physics",
+            "12:20 - 13:20": "T & NM.",
+            "13:20 - 15:00": "***",
+            "15:00 - 18:00": "PL(T) & Programming Lab"
+        },
+        "thursday": {
+            "10:00 - 11:00": "Electives",
+            "11:00 - 12:00": "***",
+            "12:00 - 14:00": "ED & Graphics",
+            "14:00 - 15:00": "***",
+            "15:00 - 16:00": "Physics",
+            "16:00 - 17:00": "EVS",
+            "17:00 - 18:00": "Sc LS."
+        },
+        "friday": {
+            "11:20 - 12:20": "T & NM.",
+            "12:20 - 13:20": "Sc LS.",
+            "13:20 - 15:00": "***",
+            "15:00 - 17:00": "Physics Lab"
+        },
+        "saturday": {
+            "11:20 - 12:20": "Physics",
+            "12:20 - 13:20": "T & NM.",
+            "13:20 - 15:00": "***",
+            "15:00 - 18:00": "PL(T) & Programming Lab"
+        }
+    }
+}

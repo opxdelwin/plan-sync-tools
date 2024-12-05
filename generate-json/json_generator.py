@@ -1,107 +1,98 @@
 """
-Generates schedule of a section as per required
-JSON schema by the application.
+Generates schedule of a section as JSON according to required schema.
 
-Generates unique JSON for all csv files 
-from `csv/` dir. Make sure all sections are
-available prior.
-
-CLEAR CSV, OUTPUT, XLS for EACH iteration
+Processes all CSV files from `csv/` directory to generate unique JSON files.
+Note: Clear CSV, OUTPUT, XLS directories before each iteration.
 """
 
 import csv
-import json
+from typing import List, Dict
 import os
+import json
 
-def get_time_slots(reader: csv.DictReader) -> list[str]:
-    header = reader.fieldnames
-    return [slot for slot in header if slot not in ["DAY", "Section"]]
+def get_time_slots(reader: csv.DictReader) -> List[str]:
+    """Extract time slots from CSV header excluding 'DAY' and 'Section'."""
+    return [slot for slot in reader.fieldnames if slot not in ["DAY", "Section"]]
 
-def getDayInSchema(abbr:str):
-    if(abbr.upper() == 'MON'): return 'monday'
-    if(abbr.upper() == 'TUE'): return 'tuesday'
-    if(abbr.upper() == 'WED'): return 'wednesday'
-    if(abbr.upper() == 'THU'): return 'thursday'
-    if(abbr.upper() == 'FRI'): return 'friday'
-    if(abbr.upper() == 'SAT'): return 'saturday'
-    if(abbr.upper() == 'SUN'): return 'sunday'
+def get_day_in_schema(abbr: str) -> str:
+    """Convert day abbreviation to full day name."""
+    day_mapping = {
+        'MON': 'monday',
+        'TUE': 'tuesday',
+        'WED': 'wednesday',
+        'THU': 'thursday',
+        'FRI': 'friday',
+        'SAT': 'saturday',
+        'SUN': 'sunday'
+    }
+    return day_mapping.get(abbr.upper(), '')
+
+def create_period(slot: str, value: str) -> Dict:
+    """Create a period dictionary from slot and value."""
+    if value == "---/X" or value.endswith("/X"):
+        return None
     
+    sliced = value.split('/')
+    return {
+        "time": slot,
+        "subject": "***" if sliced[1] == "X" else sliced[1],
+        "room": sliced[0]
+    }
 
-academic_year = "2024 - 2025"
-sem = "SEM4 - SCE"
-output_dir = 'output/' + academic_year + '/' + sem + '/'
+def main():
+    ACADEMIC_YEAR = "2024 - 2025"
+    SEMESTER = "SEM4 - SCE"
+    INPUT_DIR = './generate-json/csv/input/'
+    OUTPUT_DIR = f'output/{ACADEMIC_YEAR}/{SEMESTER}/'
 
-modified_count = 0
+    # Create output directory if it doesn't exist
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# make dir if doesnt exist
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
+    output_template = {
+        "meta": {
+            "section": "a10",
+            "type": "norm-class",
+            "revision": "Revision 1.0",
+            "effective-date": "Dec 4, 2024",
+            "contributor": "PlanSync Admin :)",
+            "isTimetableUpdating": False
+        },
+        "data": {}
+    }
 
-output_dict = {
-    "meta": {
-        "section": "a10",
-        "type": "norm-class",
-        "revision": "Revision 1.0",
-        "effective-date": "Dec 4, 2024",
-        "contributor": "PlanSync Admin :)",
-        "isTimetableUpdating": False
-    },
+    modified_count = 0
 
-    "data": {}
-}
+    for csv_file in os.listdir(INPUT_DIR):
+        file_path = os.path.join(INPUT_DIR, csv_file)
+        if not os.path.isfile(file_path):
+            print(f'Not a file: {csv_file}\t SKIPPING')
+            continue
 
-time_slots = None
-
-
-for csvFile in os.listdir('./generate-json/csv/input/'):
-    if not os.path.isfile('./generate-json/csv/input/' + csvFile):
-        print('Not a file: ' + csvFile + '\t SKIPPING')
-        continue
-
-    # Open the CSV file for reading
-    with open('./generate-json/csv/input/' + csvFile, mode='r') as file:
-        print('Gen -> ' + csvFile)
-        # Create a CSV reader with DictReader
-        csv_reader = csv.DictReader(file, delimiter=",")
-        if(time_slots == None):
+        print(f'Processing -> {csv_file}')
+        with open(file_path, mode='r') as file:
+            csv_reader = csv.DictReader(file)
             time_slots = get_time_slots(csv_reader)
-    
-        # Iterate through each row in the CSV file
-        for row in csv_reader:
             
-            # Modify output_dict and add day-wise value
-            # update keys as per csv header
-            day_in_schema = getDayInSchema(row["DAY"])
-            periods = []
-            
-            for slot in time_slots:
-               
-                if(row[slot] == "---/X" or row[slot].endswith("/X")):
-                    continue
-                else:
-                    print(slot)
-                    sliced = row[slot].split('/')
-                    periods.append({
-                        "time": slot,
-                        "subject": sliced[1] if sliced[1] != "X" else "***",
-                        "room": sliced[0],
-                    })
+            for row in csv_reader:
+                day_in_schema = get_day_in_schema(row["DAY"])
+                periods = []
                 
-              
-        
-            output_dict["data"][day_in_schema] = periods
+                for slot in time_slots:
+                    period = create_period(slot, row[slot])
+                    if period:
+                        periods.append(period)
+                
+                output_dict = output_template.copy()
+                output_dict["data"][day_in_schema] = periods
+                output_dict["meta"]["section"] = row["Section"]
 
-            # update output meta['section']
-            output_dict["meta"]["section"] = row["Section"]
+                output_file = os.path.join(OUTPUT_DIR, f"{os.path.splitext(csv_file)[0]}.json")
+                with open(output_file, 'w') as write_file:
+                    json.dump(output_dict, write_file, indent=4)
 
-            # write to file
-            with open(output_dir + str(file.name.split('/')[-1].split('.')[0]) + '.json', 'w') as writeFile:
-                json.dump(output_dict, writeFile, indent=4)
-                writeFile.close()
+            modified_count += 1
 
-        # need not to reset output_dict content for 
-        # every iteration as it'll be overwritten anyways
-        file.close()
-        modified_count += 1
+    print(f"\n|---------- GENERATED {modified_count} JSON FILES ----------|\n")
 
-print("\n|---------- GENERATED {} JSON FILES ----------|\n".format(modified_count))
+if __name__ == "__main__":
+    main()

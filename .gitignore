@@ -1,3 +1,5 @@
 /xls/
 /output/
 /csv/
+/generate-json/csv/input/*
+/generate-json/csv/bulk_csv/*

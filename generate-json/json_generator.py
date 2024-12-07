@@ -18,12 +18,19 @@ def get_day_in_schema(abbr: str) -> str:
     """Convert day abbreviation to full day name."""
     day_mapping = {
         'MON': 'monday',
+        'MONDAY': 'monday',
         'TUE': 'tuesday',
+        'TUESDAY': 'tuesday',
         'WED': 'wednesday',
+        'WEDNESDAY': 'wednesday',
         'THU': 'thursday',
+        'THURSDAY': 'thursday',
         'FRI': 'friday',
+        'FRIDAY': 'friday',
         'SAT': 'saturday',
-        'SUN': 'sunday'
+        'SATURDAY': 'saturday',
+        'SUN': 'sunday',
+        'SUNNDAY': 'sunday'
     }
     return day_mapping.get(abbr.upper(), '')
 
@@ -41,7 +48,7 @@ def create_period(slot: str, value: str) -> Dict:
 
 def main():
     ACADEMIC_YEAR = "2024 - 2025"
-    SEMESTER = "SEM4 - SCE"
+    SEMESTER = "SEM4 - ECS"
     INPUT_DIR = './generate-json/csv/input/'
     OUTPUT_DIR = f'output/{ACADEMIC_YEAR}/{SEMESTER}/'
 
@@ -72,6 +79,7 @@ def main():
         with open(file_path, mode='r') as file:
             csv_reader = csv.DictReader(file)
             time_slots = get_time_slots(csv_reader)
+            output_dict = json.loads(json.dumps(output_template))
             
             for row in csv_reader:
                 day_in_schema = get_day_in_schema(row["DAY"])
@@ -82,8 +90,8 @@ def main():
                     if period:
                         periods.append(period)
                 
-                output_dict = output_template.copy()
-                output_dict["data"][day_in_schema] = periods
+                if periods:  # Only add the day if there are periods
+                    output_dict["data"][day_in_schema] = periods
                 output_dict["meta"]["section"] = row["Section"]
 
                 output_file = os.path.join(OUTPUT_DIR, f"{os.path.splitext(csv_file)[0]}.json")

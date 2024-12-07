@@ -3,5 +3,5 @@
 /csv/
 /generate-json/csv/input/*
 /generate-json/csv/bulk_csv/*
-**/.DS_Dtore
+**/**/.DS_Dtore
 .DS_Store

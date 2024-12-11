@@ -5,3 +5,9 @@
 /generate-json/csv/bulk_csv/*
 **/**/.DS_Dtore
 .DS_Store
+
+
+# IGNORE ALL CSVS
+**/**.csv
+**/__pycache__/**
+**/**.sql

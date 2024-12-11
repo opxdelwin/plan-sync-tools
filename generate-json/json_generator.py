@@ -11,27 +11,8 @@ import os
 import json
 
 from helpers.get_time_slots import get_time_slots
+from helpers.day_from_abbr import get_day_from_abbr
 
-
-def get_day_in_schema(abbr: str) -> str:
-    """Convert day abbreviation to full day name."""
-    day_mapping = {
-        "MON": "monday",
-        "MONDAY": "monday",
-        "TUE": "tuesday",
-        "TUESDAY": "tuesday",
-        "WED": "wednesday",
-        "WEDNESDAY": "wednesday",
-        "THU": "thursday",
-        "THURSDAY": "thursday",
-        "FRI": "friday",
-        "FRIDAY": "friday",
-        "SAT": "saturday",
-        "SATURDAY": "saturday",
-        "SUN": "sunday",
-        "SUNNDAY": "sunday",
-    }
-    return day_mapping.get(abbr.upper(), "")
 
 
 def create_period(slot: str, value: str) -> Dict:
@@ -83,7 +64,7 @@ def main():
             output_dict = json.loads(json.dumps(output_template))
 
             for row in csv_reader:
-                day_in_schema = get_day_in_schema(row["DAY"])
+                day_in_schema = get_day_from_abbr(row["DAY"])
                 periods = []
 
                 for slot in time_slots:

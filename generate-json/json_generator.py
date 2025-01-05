@@ -1,7 +1,7 @@
 """
 Generates schedule of a section as JSON according to required schema.
 
-Processes all CSV files from `csv/` directory to generate unique JSON files.
+Processes all CSV files from `csv/input/` directory to generate unique JSON files.
 Note: Clear CSV, OUTPUT, XLS directories before each iteration.
 """
 
@@ -11,13 +11,12 @@ import os
 import json
 
 from helpers.get_time_slots import get_time_slots
-from helpers.day_from_abbr import get_day_from_abbr
-
+from helpers.day_from_abbr import day_from_abbr
 
 
 def create_period(slot: str, value: str) -> Dict:
     """Create a period dictionary from slot and value."""
-    if value == "---/X" or value.endswith("/X"):
+    if value == "---/X" or value.endswith("/X") or value == "":
         return None
 
     sliced = value.split("/")
@@ -30,7 +29,7 @@ def create_period(slot: str, value: str) -> Dict:
 
 def main():
     ACADEMIC_YEAR = "2024 - 2025"
-    SEMESTER = "SEM4 - ECS"
+    SEMESTER = "SEM2 - SCE"
     INPUT_DIR = "./generate-json/csv/input/"
     OUTPUT_DIR = f"output/{ACADEMIC_YEAR}/{SEMESTER}/"
 
@@ -42,7 +41,7 @@ def main():
             "section": "a10",
             "type": "norm-class",
             "revision": "Revision 1.0",
-            "effective-date": "Dec 4, 2024",
+            "effective-date": "Jan 6, 2025",
             "contributor": "PlanSync Admin :)",
             "isTimetableUpdating": False,
         },
@@ -64,10 +63,13 @@ def main():
             output_dict = json.loads(json.dumps(output_template))
 
             for row in csv_reader:
-                day_in_schema = get_day_from_abbr(row["DAY"])
+                day_in_schema = day_from_abbr(row["DAY"])
                 periods = []
 
                 for slot in time_slots:
+                    print(
+                        "For section", row["Section"], " : ", row["DAY"], "Slot: ", slot
+                    )
                     period = create_period(slot, row[slot])
                     if period:
                         periods.append(period)

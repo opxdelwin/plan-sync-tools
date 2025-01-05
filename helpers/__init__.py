@@ -6,4 +6,5 @@ __all__ = ["sql_generator", "day_from_abbr", "get_time_slots"]
 
 import sys
 from os.path import dirname
+
 sys.path.append(dirname(__file__))

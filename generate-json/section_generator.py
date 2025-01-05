@@ -13,8 +13,8 @@ import os
 import json
 
 academic_year = "2024 - 2025"
-semester = "SEM4 - ECS"
-scan_dir = 'output/' + academic_year + '/' + semester + '/'
+semester = "SEM2 - SCE"
+scan_dir = "output/" + academic_year + "/" + semester + "/"
 
 modified_count = 0
 
@@ -22,10 +22,12 @@ modified_count = 0
 response = {}
 
 for section in os.listdir(scan_dir):
-    response[os.path.splitext(section)[0]] = os.path.splitext(section)[0] + ' - BTech CSE'
+    response[os.path.splitext(section)[0]] = (
+        os.path.splitext(section)[0] + " - BTech CSE"
+    )
     modified_count += 1
 
-with open(scan_dir + 'sections.json', 'w') as file:
+with open(scan_dir + "sections.json", "w") as file:
     json.dump({academic_year: {semester: response}}, file, indent=4)
     file.close()
 

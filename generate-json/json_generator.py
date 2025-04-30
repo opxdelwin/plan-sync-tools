@@ -10,8 +10,51 @@ from typing import Dict
 import os
 import json
 
-from helpers.get_time_slots import get_time_slots
-from helpers.day_from_abbr import day_from_abbr
+# from helpers.get_time_slots import get_time_slots
+# from helpers.day_from_abbr import day_from_abbr
+
+from csv import DictReader
+from typing import List
+
+
+def day_from_abbr(abbr: str, capitalize: bool = False) -> str:
+    """Convert day abbreviation to full day name."""
+    day_mapping = {
+        "MON": "monday",
+        "MONDAY": "monday",
+        "TUE": "tuesday",
+        "TUESDAY": "tuesday",
+        "WED": "wednesday",
+        "WEDNESDAY": "wednesday",
+        "THU": "thursday",
+        "THURSDAY": "thursday",
+        "FRI": "friday",
+        "FRIDAY": "friday",
+        "SAT": "saturday",
+        "SATURDAY": "saturday",
+        "SUN": "sunday",
+        "SUNNDAY": "sunday",
+    }
+    day = day_mapping.get(abbr.upper(), "")
+    return day if not capitalize else day.upper()
+
+
+def get_time_slots(reader: DictReader) -> List[str]:
+    """
+    Extract time slots from CSV header excluding 'DAY' and 'Section'.
+    If present, also exclude 'Academic Year', 'Program', 'Branch', 'Semester'.
+    """
+    extensionKeys = ["DAY", "Section"]
+    if "Academic Year" in reader.fieldnames:
+        extensionKeys.append("Academic Year")
+    if "Program" in reader.fieldnames:
+        extensionKeys.append("Program")
+    if "Branch" in reader.fieldnames:
+        extensionKeys.append("Branch")
+    if "Semester" in reader.fieldnames:
+        extensionKeys.append("Semester")
+
+    return [slot for slot in reader.fieldnames if slot not in extensionKeys]
 
 
 def create_period(slot: str, value: str) -> Dict:

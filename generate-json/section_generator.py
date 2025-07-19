@@ -12,8 +12,8 @@ CLEAR CSV, OUTPUT, XLS for EACH iteration.
 import os
 import json
 
-academic_year = "2024 - 2025"
-semester = "SEM2 - SCE"
+academic_year = "2025 - 2026"
+semester = "SEM3 - SCE"
 scan_dir = "output/" + academic_year + "/" + semester + "/"
 
 modified_count = 0

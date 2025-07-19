@@ -33,7 +33,7 @@ def day_from_abbr(abbr: str, capitalize: bool = False) -> str:
         "SAT": "saturday",
         "SATURDAY": "saturday",
         "SUN": "sunday",
-        "SUNNDAY": "sunday",
+        "SUNDAY": "sunday",
     }
     day = day_mapping.get(abbr.upper(), "")
     return day if not capitalize else day.upper()
@@ -71,8 +71,8 @@ def create_period(slot: str, value: str) -> Dict:
 
 
 def main():
-    ACADEMIC_YEAR = "2024 - 2025"
-    SEMESTER = "SEM2 - SCE"
+    ACADEMIC_YEAR = "2025 - 2026"
+    SEMESTER = "SEM3 - SCE"
     INPUT_DIR = "./generate-json/csv/input/"
     OUTPUT_DIR = f"output/{ACADEMIC_YEAR}/{SEMESTER}/"
 
@@ -84,7 +84,7 @@ def main():
             "section": "a10",
             "type": "norm-class",
             "revision": "Revision 1.0",
-            "effective-date": "Jan 6, 2025",
+            "effective-date": "Jul 17, 2025",
             "contributor": "PlanSync Admin :)",
             "isTimetableUpdating": False,
         },
@@ -100,34 +100,32 @@ def main():
             continue
 
         print(f"Processing -> {csv_file}")
-        with open(file_path, mode="r") as file:
+        with open(file_path, mode="r", encoding="utf-8-sig") as file:
             csv_reader = csv.DictReader(file)
             time_slots = get_time_slots(csv_reader)
-            output_dict = json.loads(json.dumps(output_template))
-
+            # Group rows by section
+            section_data = {}
             for row in csv_reader:
+                section = row["Section"]
                 day_in_schema = day_from_abbr(row["DAY"])
                 periods = []
-
                 for slot in time_slots:
-                    print(
-                        "For section", row["Section"], " : ", row["DAY"], "Slot: ", slot
-                    )
                     period = create_period(slot, row[slot])
                     if period:
                         periods.append(period)
-
-                if periods:  # Only add the day if there are periods
-                    output_dict["data"][day_in_schema] = periods
-                output_dict["meta"]["section"] = row["Section"]
-
-                output_file = os.path.join(
-                    OUTPUT_DIR, f"{os.path.splitext(csv_file)[0]}.json"
-                )
-                with open(output_file, "w") as write_file:
+                if section not in section_data:
+                    section_data[section] = {}
+                if periods:
+                    section_data[section][day_in_schema] = periods
+            # Write one JSON per section
+            for section, days in section_data.items():
+                output_dict = json.loads(json.dumps(output_template))
+                output_dict["meta"]["section"] = section
+                output_dict["data"] = days
+                output_file = os.path.join(OUTPUT_DIR, f"{section}.json")
+                with open(output_file, "w", encoding="utf-8") as write_file:
                     json.dump(output_dict, write_file, indent=4)
-
-            modified_count += 1
+                modified_count += 1
 
     print(f"\n|---------- GENERATED {modified_count} JSON FILES ----------|\n")
 

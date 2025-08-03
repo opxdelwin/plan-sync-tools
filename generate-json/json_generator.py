@@ -6,6 +6,7 @@ Note: Clear CSV, OUTPUT, XLS directories before each iteration.
 """
 
 import csv
+from datetime import date
 from typing import Dict
 import os
 import json
@@ -15,28 +16,7 @@ import json
 
 from csv import DictReader
 from typing import List
-
-
-def day_from_abbr(abbr: str, capitalize: bool = False) -> str:
-    """Convert day abbreviation to full day name."""
-    day_mapping = {
-        "MON": "monday",
-        "MONDAY": "monday",
-        "TUE": "tuesday",
-        "TUESDAY": "tuesday",
-        "WED": "wednesday",
-        "WEDNESDAY": "wednesday",
-        "THU": "thursday",
-        "THURSDAY": "thursday",
-        "FRI": "friday",
-        "FRIDAY": "friday",
-        "SAT": "saturday",
-        "SATURDAY": "saturday",
-        "SUN": "sunday",
-        "SUNDAY": "sunday",
-    }
-    day = day_mapping.get(abbr.upper(), "")
-    return day if not capitalize else day.upper()
+from utils.abbr import day_from_abbr
 
 
 def get_time_slots(reader: DictReader) -> List[str]:
@@ -83,8 +63,8 @@ def main():
         "meta": {
             "section": "a10",
             "type": "norm-class",
-            "revision": "Revision 1.0",
-            "effective-date": "Jul 17, 2025",
+            "revision": "Revision 1.4",
+            "effective-date": date.today().strftime("%b %d, %Y").title(),
             "contributor": "PlanSync Admin :)",
             "isTimetableUpdating": False,
         },
@@ -124,7 +104,7 @@ def main():
                 output_dict["data"] = days
                 output_file = os.path.join(OUTPUT_DIR, f"{section}.json")
                 with open(output_file, "w", encoding="utf-8") as write_file:
-                    json.dump(output_dict, write_file, indent=4)
+                    json.dump(output_dict, write_file, indent=2)
                 modified_count += 1
 
     print(f"\n|---------- GENERATED {modified_count} JSON FILES ----------|\n")

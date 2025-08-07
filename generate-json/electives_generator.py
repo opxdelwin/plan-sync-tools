@@ -10,22 +10,38 @@ import csv
 import json
 from datetime import date
 
-from utils.abbr import day_from_abbr
+def day_from_abbr(abbr: str, capitalize: bool = False) -> str:
+    """Convert day abbreviation to full day name."""
+    day_mapping = {
+        "MON": "monday",
+        "MONDAY": "monday",
+        "TUE": "tuesday",
+        "TUESDAY": "tuesday",
+        "WED": "wednesday",
+        "WEDNESDAY": "wednesday",
+        "THU": "thursday",
+        "THURSDAY": "thursday",
+        "FRI": "friday",
+        "FRIDAY": "friday",
+        "SAT": "saturday",
+        "SATURDAY": "saturday",
+        "SUN": "sunday",
+        "SUNDAY": "sunday",
+    }
+    day = day_mapping.get(abbr.upper(), "")
+    return day if not capitalize else day.upper()
 
 
-def parse_elective_string(elective_str: str):
+
+def parse_elective_string(elective_str: str) -> tuple[str, str]:
     """Parse the room from the cell, or return None if empty/---/X"""
-    if (
-        not elective_str
-        or elective_str.strip() == ""
-        or elective_str.strip() == "---/X"
-    ):
-        return None
+    if not elective_str or elective_str.strip() == "" or elective_str.strip() == "---/X":
+        return None, None
     try:
-        room, _ = elective_str.split("/")
-        return room.strip()
+        room, subject = elective_str.split("/")
+        return room.strip(), subject.strip()
     except Exception:
-        return None
+        return None, None
 
 
 def generate_electives_json(csv_file_path, output_json_path):
@@ -33,8 +49,8 @@ def generate_electives_json(csv_file_path, output_json_path):
     electives_data = {
         "meta": {
             "type": "electives",
-            "revision": "Revision 1.3",
-            "effective-date": date.today().strftime("%b %d, %Y").title(),
+            "revision": "Revision 1.5",
+            "effective-date": "Aug 7, 2025",
             "name": "Electives Configuration for SCE",
             "isTimetableUpdating": False,
         },
@@ -45,25 +61,26 @@ def generate_electives_json(csv_file_path, output_json_path):
     with open(csv_file_path, "r", encoding="utf-8-sig") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            day = day_from_abbr(row["DAY"].lower().strip())
+            day = row["DAY"].lower().strip()
+            day = day_from_abbr(day)
             if day not in electives_data["data"]:
                 electives_data["data"][day] = []
             section = row["Section"].strip()
             for timeslot, value in row.items():
                 if timeslot in ("DAY", "Section"):
                     continue
-                room = parse_elective_string(value)
+                room, subject = parse_elective_string(value)
                 if room is not None:
                     # Append the time to the room key
                     room_with_time = f"{room} / {timeslot}"
                     electives_data["data"][day].append(
-                        {"subject": section, "room": room_with_time}
+                        {"subject": subject, "room": room, "time": timeslot}
                     )
 
     # If any day has no entries, add a placeholder
     for day in electives_data["data"]:
         if not electives_data["data"][day]:
-            electives_data["data"][day].append({"subject": "***", "room": "***"})
+            electives_data["data"][day].append({"subject": "***", "room": "***", "time": "***"})
 
     # Write to JSON file
     with open(output_json_path, "w", encoding="utf-8") as jsonfile:

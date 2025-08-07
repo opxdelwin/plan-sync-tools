@@ -16,7 +16,29 @@ import json
 
 from csv import DictReader
 from typing import List
-from utils.abbr import day_from_abbr
+# from utils.abbr import day_from_abbr
+
+def day_from_abbr(abbr: str, capitalize: bool = False) -> str:
+    """Convert day abbreviation to full day name."""
+    day_mapping = {
+        "MON": "monday",
+        "MONDAY": "monday",
+        "TUE": "tuesday",
+        "TUESDAY": "tuesday",
+        "WED": "wednesday",
+        "WEDNESDAY": "wednesday",
+        "THU": "thursday",
+        "THURSDAY": "thursday",
+        "FRI": "friday",
+        "FRIDAY": "friday",
+        "SAT": "saturday",
+        "SATURDAY": "saturday",
+        "SUN": "sunday",
+        "SUNDAY": "sunday",
+    }
+    day = day_mapping.get(abbr.upper(), "")
+    return day if not capitalize else day.upper()
+
 
 
 def get_time_slots(reader: DictReader) -> List[str]:
@@ -52,7 +74,7 @@ def create_period(slot: str, value: str) -> Dict:
 
 def main():
     ACADEMIC_YEAR = "2025 - 2026"
-    SEMESTER = "SEM3 - SCE"
+    SEMESTER = "SEM1 - SCE"
     INPUT_DIR = "./generate-json/csv/input/"
     OUTPUT_DIR = f"output/{ACADEMIC_YEAR}/{SEMESTER}/"
 
@@ -63,7 +85,7 @@ def main():
         "meta": {
             "section": "a10",
             "type": "norm-class",
-            "revision": "Revision 1.4",
+            "revision": "Revision 1.5",
             "effective-date": date.today().strftime("%b %d, %Y").title(),
             "contributor": "PlanSync Admin :)",
             "isTimetableUpdating": False,
@@ -90,6 +112,7 @@ def main():
                 day_in_schema = day_from_abbr(row["DAY"])
                 periods = []
                 for slot in time_slots:
+                    # print(f"Processing row: {row['DAY']} {row['Section']} {day_in_schema} {slot}")
                     period = create_period(slot, row[slot])
                     if period:
                         periods.append(period)

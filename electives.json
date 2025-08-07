@@ -1,0 +1,619 @@
+{
+  "meta": {
+    "type": "electives",
+    "revision": "Revision 1.5",
+    "effective-date": "Aug 7, 2025",
+    "name": "Electives Configuration for SCE",
+    "isTimetableUpdating": false
+  },
+  "data": {
+    "tuesday": [
+      {
+        "subject": "EML-1",
+        "room": "B-301",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "EML-2",
+        "room": "B-302",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "EML-3",
+        "room": "B-303",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "EML-4",
+        "room": "B-304",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BCE-1",
+        "room": "B-305",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BCE-2",
+        "room": "B-201",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BME-1",
+        "room": "B-202",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BME-2",
+        "room": "B-203",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BI-1",
+        "room": "B-204",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BI-2",
+        "room": "B-205",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BioM-1",
+        "room": "B-306",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BioM-2",
+        "room": "B-401",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BCE-3",
+        "room": "401",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BCE-4",
+        "room": "402",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BCE-5",
+        "room": "403",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BME-3",
+        "room": "404",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BME-4",
+        "room": "405",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BME-5",
+        "room": "406",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BI-3",
+        "room": "407",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BI-4",
+        "room": "501",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BI-5",
+        "room": "502",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BCE-6",
+        "room": "503",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BioM-3",
+        "room": "504",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BioM-4",
+        "room": "505",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "SPH-5",
+        "room": "B-402",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "SPH-6",
+        "room": "B-403",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "OT-7",
+        "room": "B404",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "OT-8",
+        "room": "B-405",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "MD-3",
+        "room": "ALH-201",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "SM-5",
+        "room": "ALH-202",
+        "time": "11:20 - 12:20"
+      }
+    ],
+    "wednesday": [
+      {
+        "subject": "SPH-1",
+        "room": "B-301",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "SPH-2",
+        "room": "B-302",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "OT-1",
+        "room": "B-305",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "OT-2",
+        "room": "B-303",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "OT-3",
+        "room": "B-304",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "Nano-1",
+        "room": "B-201",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "Nano-2",
+        "room": "B-306",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "Nano-3",
+        "room": "B-401",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "SM-1",
+        "room": "B-202",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "SM-2",
+        "room": "B-203",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "QT-1",
+        "room": "B-204",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "MD-1",
+        "room": "B-205",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "SPH-3",
+        "room": "401",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "SPH-4",
+        "room": "402",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "OT-4",
+        "room": "403",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "OT-5",
+        "room": "404",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "OT-6",
+        "room": "405",
+        "time": "10:00 - 11:00"
+      },
+      {
+        "subject": "Nano-4",
+        "room": "406",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "Nano-5",
+        "room": "407",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "Nano-6",
+        "room": "501",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "SM-3",
+        "room": "502",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "SM-4",
+        "room": "503",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "QT-2",
+        "room": "504",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "MD-2",
+        "room": "505",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BCE-7",
+        "room": "ALH-201",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "BCE-8",
+        "room": "B-402",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "BCE-9",
+        "room": "B403",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "BME-6",
+        "room": "B-404",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "BME-7",
+        "room": "ALH-202",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "BI-6",
+        "room": "ALH-203",
+        "time": "11:20 - 12:20"
+      }
+    ],
+    "thursday": [
+      {
+        "subject": "EML-1",
+        "room": "B-301",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "EML-2",
+        "room": "B-305",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "EML-3",
+        "room": "B-302",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "EML-4",
+        "room": "B-303",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BCE-1",
+        "room": "B-304",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BCE-2",
+        "room": "B-201",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BME-1",
+        "room": "B-202",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BME-2",
+        "room": "B-203",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BI-1",
+        "room": "B-306",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BI-2",
+        "room": "B-401",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BioM-1",
+        "room": "B-204",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BioM-2",
+        "room": "B-205",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "BCE-3",
+        "room": "401",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BCE-4",
+        "room": "402",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BCE-5",
+        "room": "403",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BME-3",
+        "room": "404",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BME-4",
+        "room": "405",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BME-5",
+        "room": "406",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BI-3",
+        "room": "407",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BI-4",
+        "room": "501",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BI-5",
+        "room": "502",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BCE-6",
+        "room": "503",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BioM-3",
+        "room": "504",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BioM-4",
+        "room": "505",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "SPH-5",
+        "room": "ALH-201",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "SPH-6",
+        "room": "B-402",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "OT-7",
+        "room": "B-403",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "OT-8",
+        "room": "B404",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "MD-3",
+        "room": "B-405",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "SM-5",
+        "room": "ALH-202",
+        "time": "11:20 - 12:20"
+      }
+    ],
+    "friday": [
+      {
+        "subject": "SPH-1",
+        "room": "B-305",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "SPH-2",
+        "room": "B-301",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "OT-1",
+        "room": "B-302",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "OT-2",
+        "room": "B-306",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "OT-3",
+        "room": "B-303",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "Nano-1",
+        "room": "B-401",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "Nano-2",
+        "room": "B-304",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "Nano-3",
+        "room": "B-201",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "SM-1",
+        "room": "B-202",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "SM-2",
+        "room": "B-203",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "QT-1",
+        "room": "B-204",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "MD-1",
+        "room": "B-205",
+        "time": "12:20 - 13:20"
+      },
+      {
+        "subject": "SPH-3",
+        "room": "401",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "SPH-4",
+        "room": "402",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "OT-4",
+        "room": "403",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "OT-5",
+        "room": "404",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "OT-6",
+        "room": "405",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "Nano-4",
+        "room": "406",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "Nano-5",
+        "room": "407",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "Nano-6",
+        "room": "501",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "SM-3",
+        "room": "502",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "SM-4",
+        "room": "503",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "QT-2",
+        "room": "504",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "MD-2",
+        "room": "505",
+        "time": "10:10 - 11:10"
+      },
+      {
+        "subject": "BCE-7",
+        "room": "B-402",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "BCE-8",
+        "room": "B-403",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "BCE-9",
+        "room": "B404",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "BME-6",
+        "room": "B-405",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "BME-7",
+        "room": "B406",
+        "time": "11:20 - 12:20"
+      },
+      {
+        "subject": "BI-6",
+        "room": "ALH-201",
+        "time": "11:20 - 12:20"
+      }
+    ]
+  }
+}

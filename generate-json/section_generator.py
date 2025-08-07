@@ -13,7 +13,7 @@ import os
 import json
 
 academic_year = "2025 - 2026"
-semester = "SEM3 - SCE"
+semester = "SEM1 - SCE"
 scan_dir = "output/" + academic_year + "/" + semester + "/"
 
 modified_count = 0

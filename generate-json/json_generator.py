@@ -112,7 +112,7 @@ def main():
                 day_in_schema = day_from_abbr(row["DAY"])
                 periods = []
                 for slot in time_slots:
-                    # print(f"Processing row: {row['DAY']} {row['Section']} {day_in_schema} {slot}")
+                    print(f"Processing row: {row['DAY']} {row['Section']} {day_in_schema} {slot}")
                     period = create_period(slot, row[slot])
                     if period:
                         periods.append(period)

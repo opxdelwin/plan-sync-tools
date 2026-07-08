@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "section": "CS20",
+    "type": "norm-class",
+    "revision": "Revision 1.3",
+    "effective-date": "Aug 4, 2025",
+    "contributor": "PlanSync Admin :)",
+    "isTimetableUpdating": false
+  },
+  "data": {
+    "monday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "SE",
+        "teacher": [
+          "Dr. Suchismita Rout"
+        ],
+        "room": "C25-A318"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "CNL",
+        "teacher": [
+          "Dr. VIkas Hassija"
+        ],
+        "room": "C25-A204"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "CNL",
+        "teacher": [
+          "Dr. VIkas Hassija"
+        ],
+        "room": "C25-A204"
+      }
+    ],
+    "tuesday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "EE",
+        "teacher": [
+          "Dr. Tulasi Malini Maharatha"
+        ],
+        "room": "C25-A106"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "DAA",
+        "teacher": [
+          "Mr. Amit Kumar"
+        ],
+        "room": "C25-A106"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "CN",
+        "teacher": [
+          "Dr. VIkas Hassija"
+        ],
+        "room": "C25-A106"
+      }
+    ],
+    "wednesday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "CN",
+        "teacher": [
+          "Dr. VIkas Hassija"
+        ],
+        "room": "C25-A315"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "DAAL",
+        "teacher": [
+          "Mr. Amit Kumar"
+        ],
+        "room": "C25-A303"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "DAAL",
+        "teacher": [
+          "Mr. Amit Kumar"
+        ],
+        "room": "C25-A303"
+      },
+      {
+        "time": "11:00 - 12:00",
+        "subject": "SE",
+        "teacher": [
+          "Dr. Suchismita Rout"
+        ],
+        "room": "C25-A311"
+      }
+    ],
+    "thursday": [
+      {
+        "time": "09:00 - 10:00",
+        "subject": "SE",
+        "teacher": [
+          "Dr. Suchismita Rout"
+        ],
+        "room": "C25-A208"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "DAA",
+        "teacher": [
+          "Mr. Amit Kumar"
+        ],
+        "room": "C25-A208"
+      },
+      {
+        "time": "11:00 - 12:00",
+        "subject": "EE",
+        "teacher": [
+          "Dr. Tulasi Malini Maharatha"
+        ],
+        "room": "C25-A208"
+      }
+    ],
+    "friday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "DAA",
+        "teacher": [
+          "Mr. Amit Kumar"
+        ],
+        "room": "C25-A016"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "SE",
+        "teacher": [
+          "Dr. Suchismita Rout"
+        ],
+        "room": "C25-A016"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "CN",
+        "teacher": [
+          "Dr. VIkas Hassija"
+        ],
+        "room": "C25-A016"
+      },
+      {
+        "time": "11:00 - 12:00",
+        "subject": "EE",
+        "teacher": [
+          "Dr. Tulasi Malini Maharatha"
+        ],
+        "room": "C25-A016"
+      }
+    ]
+  }
+}

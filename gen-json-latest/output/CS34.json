@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "section": "CS34",
+    "type": "norm-class",
+    "revision": "Revision 1.3",
+    "effective-date": "Aug 4, 2025",
+    "contributor": "PlanSync Admin :)",
+    "isTimetableUpdating": false
+  },
+  "data": {
+    "monday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "SE",
+        "teacher": [
+          "Mr. Manas Ranjan Biswal"
+        ],
+        "room": "C25-A116"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "EE",
+        "teacher": [
+          "Dr. Lopamudra Lenka"
+        ],
+        "room": "C25-A116"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "CN",
+        "teacher": [
+          "Mr. Vishal Meena"
+        ],
+        "room": "C25-A116"
+      }
+    ],
+    "tuesday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "SE",
+        "teacher": [
+          "Mr. Manas Ranjan Biswal"
+        ],
+        "room": "C25-B013"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "CNL",
+        "teacher": [
+          "Mr. Vishal Meena"
+        ],
+        "room": "C25-B003"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "CNL",
+        "teacher": [
+          "Mr. Vishal Meena"
+        ],
+        "room": "C25-B003"
+      }
+    ],
+    "wednesday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "DAA",
+        "teacher": [
+          "Mrs. Ronali Padhy"
+        ],
+        "room": "C25-B009"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "DAAL",
+        "teacher": [
+          "Mrs. Ronali Padhy"
+        ],
+        "room": "C25-B103"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "DAAL",
+        "teacher": [
+          "Mrs. Ronali Padhy"
+        ],
+        "room": "C25-B103"
+      }
+    ],
+    "thursday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "SE",
+        "teacher": [
+          "Mr. Manas Ranjan Biswal"
+        ],
+        "room": "C25-A306"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "DAA",
+        "teacher": [
+          "Mrs. Ronali Padhy"
+        ],
+        "room": "C25-A306"
+      },
+      {
+        "time": "11:00 - 12:00",
+        "subject": "CN",
+        "teacher": [
+          "Mr. Vishal Meena"
+        ],
+        "room": "C25-A313"
+      }
+    ],
+    "friday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "DAA",
+        "teacher": [
+          "Mrs. Ronali Padhy"
+        ],
+        "room": "C25-A110"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "CN",
+        "teacher": [
+          "Mr. Vishal Meena"
+        ],
+        "room": "C25-A110"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "SE",
+        "teacher": [
+          "Mr. Manas Ranjan Biswal"
+        ],
+        "room": "C25-A110"
+      },
+      {
+        "time": "11:00 - 12:00",
+        "subject": "EE",
+        "teacher": [
+          "Dr. Lopamudra Lenka"
+        ],
+        "room": "C25-A110"
+      }
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "section": "CS60",
+    "type": "norm-class",
+    "revision": "Revision 1.3",
+    "effective-date": "Aug 4, 2025",
+    "contributor": "PlanSync Admin :)",
+    "isTimetableUpdating": false
+  },
+  "data": {
+    "monday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "SE",
+        "teacher": [
+          "Mr. Sougatamoy Biswas"
+        ],
+        "room": "C25-B108"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "DAAL",
+        "teacher": [
+          "Dr. Suman Majumder"
+        ],
+        "room": "C25-B212"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "DAAL",
+        "teacher": [
+          "Dr. Suman Majumder"
+        ],
+        "room": "C25-B212"
+      }
+    ],
+    "tuesday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "SE",
+        "teacher": [
+          "Mr. Sougatamoy Biswas"
+        ],
+        "room": "C25-A218"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "DAA",
+        "teacher": [
+          "Dr. Debachudamani Prusti"
+        ],
+        "room": "C25-A218"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "CN",
+        "teacher": [
+          "Mr. Sankalp Nayak"
+        ],
+        "room": "C25-A218"
+      }
+    ],
+    "wednesday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "CN",
+        "teacher": [
+          "Mr. Sankalp Nayak"
+        ],
+        "room": "C25-A118"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "EE",
+        "teacher": [
+          "New Faculty 5 ee"
+        ],
+        "room": "C25-A118"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "SE",
+        "teacher": [
+          "Mr. Sougatamoy Biswas"
+        ],
+        "room": "C25-A118"
+      },
+      {
+        "time": "11:00 - 12:00",
+        "subject": "DAA",
+        "teacher": [
+          "Dr. Debachudamani Prusti"
+        ],
+        "room": "C25-A118"
+      }
+    ],
+    "thursday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "EE",
+        "teacher": [
+          "New Faculty 5 ee"
+        ],
+        "room": "C25-B016"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "CNL",
+        "teacher": [
+          "Dr. VIkas Hassija"
+        ],
+        "room": "C25-B214"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "CNL",
+        "teacher": [
+          "Dr. VIkas Hassija"
+        ],
+        "room": "C25-B214"
+      }
+    ],
+    "friday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "DAA",
+        "teacher": [
+          "Dr. Debachudamani Prusti"
+        ],
+        "room": "C25-A206"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "SE",
+        "teacher": [
+          "Mr. Sougatamoy Biswas"
+        ],
+        "room": "C25-A206"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "EE",
+        "teacher": [
+          "New Faculty 5 ee"
+        ],
+        "room": "C25-A206"
+      },
+      {
+        "time": "11:00 - 12:00",
+        "subject": "CN",
+        "teacher": [
+          "Mr. Sankalp Nayak"
+        ],
+        "room": "C25-A206"
+      }
+    ]
+  }
+}

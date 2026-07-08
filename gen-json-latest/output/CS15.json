@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "section": "CS15",
+    "type": "norm-class",
+    "revision": "Revision 1.3",
+    "effective-date": "Aug 4, 2025",
+    "contributor": "PlanSync Admin :)",
+    "isTimetableUpdating": false
+  },
+  "data": {
+    "monday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "EE",
+        "teacher": [
+          "Dr. Ananya Mitra"
+        ],
+        "room": "C25-A018"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "SE",
+        "teacher": [
+          "Ms. Shilpa Das"
+        ],
+        "room": "C25-A018"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "DAA",
+        "teacher": [
+          "Dr. Dayal Kumar Behera"
+        ],
+        "room": "C25-A018"
+      }
+    ],
+    "tuesday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "CN",
+        "teacher": [
+          "Dr. Subhashree Darshana"
+        ],
+        "room": "C25-A315"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "DAAL",
+        "teacher": [
+          "Dr. Dayal Kumar Behera"
+        ],
+        "room": "C25-A112"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "DAAL",
+        "teacher": [
+          "Dr. Dayal Kumar Behera"
+        ],
+        "room": "C25-A112"
+      }
+    ],
+    "wednesday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "EE",
+        "teacher": [
+          "Dr. Ananya Mitra"
+        ],
+        "room": "C25-A313"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "CNL",
+        "teacher": [
+          "Dr. Subhashree Darshana"
+        ],
+        "room": "C25-A212"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "CNL",
+        "teacher": [
+          "Dr. Subhashree Darshana"
+        ],
+        "room": "C25-A212"
+      },
+      {
+        "time": "11:00 - 12:00",
+        "subject": "SE",
+        "teacher": [
+          "Ms. Shilpa Das"
+        ],
+        "room": "C25-A309"
+      }
+    ],
+    "thursday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "DAA",
+        "teacher": [
+          "Dr. Dayal Kumar Behera"
+        ],
+        "room": "C25-A206"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "CN",
+        "teacher": [
+          "Dr. Subhashree Darshana"
+        ],
+        "room": "C25-A206"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "SE",
+        "teacher": [
+          "Ms. Shilpa Das"
+        ],
+        "room": "C25-A206"
+      }
+    ],
+    "friday": [
+      {
+        "time": "08:00 - 09:00",
+        "subject": "CN",
+        "teacher": [
+          "Dr. Subhashree Darshana"
+        ],
+        "room": "C25-A011"
+      },
+      {
+        "time": "09:00 - 10:00",
+        "subject": "DAA",
+        "teacher": [
+          "Dr. Dayal Kumar Behera"
+        ],
+        "room": "C25-A011"
+      },
+      {
+        "time": "10:00 - 11:100",
+        "subject": "SE",
+        "teacher": [
+          "Ms. Shilpa Das"
+        ],
+        "room": "C25-A011"
+      },
+      {
+        "time": "11:00 - 12:00",
+        "subject": "EE",
+        "teacher": [
+          "Dr. Ananya Mitra"
+        ],
+        "room": "C25-A011"
+      }
+    ]
+  }
+}

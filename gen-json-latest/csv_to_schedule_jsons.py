@@ -7,11 +7,12 @@ from collections import defaultdict
 
 INPUT_CSV = "./input/input.csv"
 OUTPUT_DIR = "./output"
+SKIP_IF_FIRST_CELL_CONTENT = "Sem 5 | "
 
 META = {
     "type": "norm-class",
-    "revision": "Revision 1.3",
-    "effective-date": "Aug 4, 2025",
+    "revision": "Revision 1.1",
+    "effective-date": "Jul 13, 2026",
     "contributor": "PlanSync Admin :)",
     "isTimetableUpdating": False,
 }
@@ -51,6 +52,10 @@ def main():
 
         for row in reader:
             if len(row) < 2:
+                continue
+
+            # Skip rows where the first cell matches the SKIP_IF_FIRST_CELL_CONTENT
+            if row[0].strip().startswith(SKIP_IF_FIRST_CELL_CONTENT):
                 continue
 
             section = row[0].strip()

@@ -7,7 +7,7 @@ from collections import defaultdict
 
 INPUT_CSV = "./input/input.csv"
 OUTPUT_DIR = "./output"
-SKIP_IF_FIRST_CELL_CONTENT = "Sem 5 | "
+SKIP_IF_FIRST_CELL_CONTENT = "Sem 7 | "
 
 META = {
     "type": "norm-class",

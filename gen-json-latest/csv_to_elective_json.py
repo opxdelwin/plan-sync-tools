@@ -85,7 +85,7 @@ def main():
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    output_file = OUTPUT_DIR / f"elective-scheme-{SCHEME_NAME}.json"
+    output_file = OUTPUT_DIR / f"electives-scheme-{SCHEME_NAME}.json"
 
     with output_file.open("w", encoding="utf-8") as f:
         json.dump(

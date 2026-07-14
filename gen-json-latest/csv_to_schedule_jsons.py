@@ -11,8 +11,8 @@ SKIP_IF_FIRST_CELL_CONTENT = "Sem 7 | "
 
 META = {
     "type": "norm-class",
-    "revision": "Revision 1.1",
-    "effective-date": "Jul 13, 2026",
+    "revision": "Revision 1.3",
+    "effective-date": "Jul 15, 2026",
     "contributor": "PlanSync Admin :)",
     "isTimetableUpdating": False,
 }
@@ -24,14 +24,19 @@ def parse_cell(cell):
         SUBJECT
         TEACHER
         ROOM
+    or (no teacher):
+        SUBJECT
+        ROOM
 
-    Returns (subject, teacher, room)
+    Returns (subject, teacher, room); teacher is None if absent
     """
     parts = [p.strip() for p in cell.split("\n") if p.strip()]
-    if len(parts) < 3:
-        return None
+    if len(parts) >= 3:
+        return parts[0], parts[1], parts[2]
+    if len(parts) == 2:
+        return parts[0], None, parts[1]
 
-    return parts[0], parts[1], parts[2]
+    return None
 
 
 def main():
@@ -91,7 +96,7 @@ def main():
                     {
                         "time": time,
                         "subject": subject,
-                        "teacher": [teacher],
+                        "teacher": [teacher] if teacher else [],
                         "room": room,
                     }
                 )

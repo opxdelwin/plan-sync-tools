@@ -8,7 +8,7 @@ INPUT_DIR = "./output"
 OUTPUT_FILE = "./output/sections.json"
 
 ACADEMIC_YEAR = "2026 - 2027"
-SEMESTER = "SEM5 - SCE"
+SEMESTER = "SEM3 - SCE"
 COURSE = "BTech CSE"
 
 

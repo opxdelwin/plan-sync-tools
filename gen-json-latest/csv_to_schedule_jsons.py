@@ -3,11 +3,13 @@
 import csv
 import json
 import os
+import re
 from collections import defaultdict
 
 INPUT_CSV = "./input/input.csv"
 OUTPUT_DIR = "./output"
-SKIP_IF_FIRST_CELL_CONTENT = "Sem 5 | "
+# Group-header rows look like "Sem 7 | DL-S7-PE4 | CS21" (older CSVs: "Sem 5 | ...")
+GROUP_HEADER_RE = re.compile(r"^Sem\s*\d+\s*\|")
 
 META = {
     "type": "norm-class",
@@ -59,8 +61,10 @@ def main():
             if len(row) < 2:
                 continue
 
-            # Skip rows where the first cell matches the SKIP_IF_FIRST_CELL_CONTENT
-            if row[0].strip().startswith(SKIP_IF_FIRST_CELL_CONTENT):
+            # Skip group-header rows; the section rows that follow carry the
+            # section name themselves, so blocks for the same section (e.g.
+            # core + elective course groups) merge into one timetable
+            if GROUP_HEADER_RE.match(row[0].strip()):
                 continue
 
             section = row[0].strip()
@@ -101,8 +105,28 @@ def main():
                     }
                 )
 
+    slot_order = {t: i for i, t in enumerate(time_slots)}
+
     for section, timetable in timetables.items():
-        timetable["data"] = dict(timetable["data"])
+        data = {}
+        for day, entries in timetable["data"].items():
+            entries.sort(key=lambda e: slot_order.get(e["time"], len(slot_order)))
+
+            merged = []
+            seen = set()
+            for entry in entries:
+                key = (entry["time"], entry["subject"], tuple(entry["teacher"]), entry["room"])
+                if key in seen:
+                    continue
+                seen.add(key)
+                if any(e["time"] == entry["time"] for e in merged):
+                    print(
+                        f"Warning: conflicting entries for {section} {day} {entry['time']}"
+                    )
+                merged.append(entry)
+            data[day] = merged
+
+        timetable["data"] = data
 
         out_path = os.path.join(OUTPUT_DIR, f"{section}.json")
 

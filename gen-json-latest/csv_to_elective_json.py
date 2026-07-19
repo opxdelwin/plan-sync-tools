@@ -16,8 +16,8 @@ OUTPUT_DIR = Path("./output")
 
 META = {
     "type": "electives",
-    "revision": "Revision 1.3",
-    "effective-date": "Jul 15, 2026",
+    "revision": "Revision 1.4",
+    "effective-date": "Jul 20, 2026",
     "name": f"Electives Configuration for {SCHEME_NAME.upper()}",
     "isTimetableUpdating": False,
 }

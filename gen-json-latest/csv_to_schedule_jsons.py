@@ -7,12 +7,12 @@ from collections import defaultdict
 
 INPUT_CSV = "./input/input.csv"
 OUTPUT_DIR = "./output"
-SKIP_IF_FIRST_CELL_CONTENT = "Sem 7 | "
+SKIP_IF_FIRST_CELL_CONTENT = "Sem 5 | "
 
 META = {
     "type": "norm-class",
-    "revision": "Revision 1.3",
-    "effective-date": "Jul 15, 2026",
+    "revision": "Revision 1.4",
+    "effective-date": "Jul 20, 2026",
     "contributor": "PlanSync Admin :)",
     "isTimetableUpdating": False,
 }
